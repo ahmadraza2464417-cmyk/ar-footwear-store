@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+     <script type="text/javascript" src="[https://identity.netlify.com/v1/netlify-identity-widget.js](https://identity.netlify.com/v1/netlify-identity-widget.js)"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- IMPORTANT: Niche apni Google Search Console ki verification ID daalein -->
+    <meta name="google-site-verification" content="Pk5jmqGOzykf3OHuO9XO6WhPHATwXm0PP2ktp9lDTUo" />
+    
+    <!-- New Feature: SEO Meta Description for Google Ranking -->
+    <meta name="description" content="Ahmad Raza - Professional Digital Services, Video Editing, and YouTube Automation Expert. Start scaling your revenue today.">
+
+    <title>Ahmad Raza | Digital Services & Automation</title>
+    
+    <!-- Custom Professional Favicon (AR) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23000000'/><text x='50' y='54' font-family='Arial, sans-serif' font-size='45' font-weight='bold' fill='%23ffffff' text-anchor='middle' dominant-baseline='middle'>AR</text></svg>">
+    
+    <!-- Google Fonts (Inter for that exact Shopify aesthetic) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS for Modern Styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        shopify: {
+                            light: '#f3f4f6', // Light gray background
+                            dark: '#000000',  // Pure black
+                            card: '#1a1a1a',  // Dark gray for cards
+                            green: '#008060'  // Shopify green accent
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom CSS for specific Shopify-like interactions */
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Navbar transitions */
+        .nav-scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        /* Input field reset */
+        input:focus, textarea:focus, button:focus {
+            outline: none;
+        }
+
+        /* FAQ Accordion Transitions */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, padding 0.4s ease;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding-bottom: 24px;
+        }
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        /* Smooth hover for cards */
+        .hover-card {
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            border: 1px solid transparent;
+        }
+        .hover-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255,255,255,0.2);
+        }
+
+        /* Scroll to Top Button Transitions */
+        #scrollTopBtn {
+            transition: all 0.3s ease-in-out;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+        #scrollTopBtn.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-shopify-light text-black antialiased">
+
+    <!-- 1. Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 px-6 md:px-12 bg-shopify-light">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="text-2xl font-bold tracking-tight flex items-center gap-2">
+                <i class="fas fa-play-circle text-shopify-green"></i>
+                Ahmad Raza
+            </a>
+            
+            <!-- Desktop Links -->
+            <div class="hidden md:flex space-x-8 text-base font-medium text-gray-700">
+                <a href="#services" class="hover:text-black transition">Services</a>
+                <a href="#stats" class="hover:text-black transition">About</a>
+                <a href="#faq" class="hover:text-black transition">FAQ</a>
+                <a href="#contact" class="hover:text-black transition">Contact</a>
+            </div>
+
+            <!-- CTA Button -->
+            <a href="#contact" class="bg-black text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-gray-800 transition shadow-lg">
+                Start for free
+            </a>
+        </div>
+    </nav>
+
+    <!-- 2. Hero Section (Light Theme) -->
+    <section class="pt-32 pb-20 md:pt-40 md:pb-32 px-6 md:px-12 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/2">
+            <h1 class="text-5xl md:text-7xl font-semibold tracking-tighter leading-[1.1] mb-6">
+                Start your digital success today
+            </h1>
+            <p class="text-xl text-gray-600 mb-10 leading-relaxed">
+                More than a video editor, Ahmad Raza helps you build automated channels, lower production costs, and save time. Start automating, then scale your revenue.
+            </p>
+            
+            <!-- Dark Email Capture Box (Shopify Style) -->
+            <div class="bg-[#111] text-white p-8 rounded-3xl max-w-lg shadow-2xl">
+                <h3 class="text-xl font-semibold mb-2">Start for free, scale for real</h3>
+                <p class="text-gray-400 text-sm mb-6">Earn high retention and views.<br>You agree to receive strategy emails.</p>
+                
+                <div class="flex bg-[#2a2a2a] p-1.5 rounded-full items-center">
+                    <input type="email" placeholder="Enter your email" class="bg-transparent border-none px-4 py-2 w-full text-white placeholder-gray-400">
+                    <button class="bg-white text-black w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-200 transition shrink-0">
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="md:w-1/2 w-full">
+            <!-- High-quality workspace image -->
+            <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Dashboard Setup" class="rounded-3xl shadow-2xl w-full object-cover aspect-[4/3]">
+        </div>
+    </section>
+
+    <!-- 3. Services Section (Dark Theme) -->
+    <section id="services" class="bg-shopify-dark text-white py-24 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-medium tracking-tight mb-16">Smarter creation starts here</h2>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="hover-card bg-shopify-card p-6 rounded-3xl">
+                    <div class="bg-gray-100 rounded-2xl h-48 mb-6 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Editing" class="w-full h-full object-cover">
+                        <div class="absolute bottom-4 left-4 right-4 bg-white text-black p-3 rounded-xl shadow-lg flex justify-between items-center text-sm font-semibold">
+                            <span>Final Render</span>
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-md">HQ</span>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">World's best editing</h3>
+                    <p class="text-gray-400 leading-relaxed">Fast, flexible, and converts 15% better than average videos on the platform. Keep your audience engaged.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="hover-card bg-shopify-card p-6 rounded-3xl">
+                    <div class="bg-purple-900 rounded-2xl h-48 mb-6 overflow-hidden relative flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="AI Tools" class="w-full h-full object-cover opacity-60">
+                        <i class="fas fa-magic text-white text-5xl absolute"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">Built-in AI tools</h3>
+                    <p class="text-gray-400 leading-relaxed">Get more done with AI functionality that's built into every channel strategy. From scripts to voiceovers.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="hover-card bg-shopify-card p-6 rounded-3xl">
+                    <div class="bg-[#0a0a0a] rounded-2xl h-48 mb-6 overflow-hidden relative border border-gray-800 flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="E-commerce" class="w-full h-full object-cover opacity-50">
+                        <div class="absolute text-center">
+                            <div class="text-4xl font-bold text-blue-500 mb-1">99.9%</div>
+                            <div class="text-sm font-medium">Uptime</div>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">Reliable E-commerce</h3>
+                    <p class="text-gray-400 leading-relaxed">Our robust dropshipping and store setups keep your business running smoothly, day and night.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Stats & Help Section (Light Theme) -->
+    <section id="stats" class="bg-white py-24 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto">
+            
+            <!-- Stats Grid -->
+            <div class="grid md:grid-cols-2 gap-6 mb-24">
+                <div class="bg-shopify-light p-10 rounded-3xl">
+                    <h2 class="text-5xl font-medium tracking-tight mb-2">50M+ views</h2>
+                    <p class="text-gray-600 text-lg">Total views generated worldwide.</p>
+                </div>
+                <div class="bg-shopify-light p-10 rounded-3xl">
+                    <h2 class="text-5xl font-medium tracking-tight mb-2">175+ clients</h2>
+                    <p class="text-gray-600 text-lg">Businesses powered by Ahmad Raza.</p>
+                </div>
+            </div>
+
+            <!-- Help/Support Grid -->
+            <h2 class="text-4xl font-medium tracking-tight mb-12">Build with help by your side</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <i class="fas fa-headset text-2xl mb-4 text-black"></i>
+                    <h4 class="text-xl font-semibold mb-2">24/7 support</h4>
+                    <p class="text-gray-600">Our support staff and virtual assistants are always ready.</p>
+                </div>
+                <div>
+                    <i class="fas fa-cubes text-2xl mb-4 text-black"></i>
+                    <h4 class="text-xl font-semibold mb-2">AI Integrations</h4>
+                    <p class="text-gray-600">For whatever extra functionality your channel needs.</p>
+                </div>
+                <div>
+                    <i class="fas fa-tools text-2xl mb-4 text-black"></i>
+                    <h4 class="text-xl font-semibold mb-2">Expert courses</h4>
+                    <p class="text-gray-600">Lessons and tips from YouTube automation experts.</p>
+                </div>
+                <div>
+                    <i class="fas fa-users text-2xl mb-4 text-black"></i>
+                    <h4 class="text-xl font-semibold mb-2">Dedicated Partners</h4>
+                    <p class="text-gray-600">Do more with our specialized commerce partners.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. FAQ Section (Dark Theme with Accordion) -->
+    <section id="faq" class="bg-shopify-dark text-white py-24 px-6 md:px-12">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-medium tracking-tight mb-12">Frequently asked questions</h2>
+            
+            <div class="border-t border-gray-800">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item border-b border-gray-800">
+                    <button class="w-full text-left py-8 flex justify-between items-center focus:outline-none">
+                        <span class="text-xl md:text-2xl">How can I create a channel for my business?</span>
+                        <div class="bg-white text-black w-8 h-8 rounded-full flex items-center justify-center shrink-0 faq-icon">
+                            <i class="fas fa-plus text-sm"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer text-gray-400 text-lg md:text-xl leading-relaxed">
+                        We handle the entire process. From niche research and branding to scripting, editing, and uploading. You simply approve the content and watch it grow.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item border-b border-gray-800">
+                    <button class="w-full text-left py-8 flex justify-between items-center focus:outline-none">
+                        <span class="text-xl md:text-2xl">What is YouTube automation?</span>
+                        <div class="bg-white text-black w-8 h-8 rounded-full flex items-center justify-center shrink-0 faq-icon">
+                            <i class="fas fa-plus text-sm"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer text-gray-400 text-lg md:text-xl leading-relaxed">
+                        It is a business model where you run a YouTube channel without showing your face or recording your own voice, outsourcing the creation to experts and AI tools.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item border-b border-gray-800">
+                    <button class="w-full text-left py-8 flex justify-between items-center focus:outline-none">
+                        <span class="text-xl md:text-2xl">How do I make money from a channel?</span>
+                        <div class="bg-white text-black w-8 h-8 rounded-full flex items-center justify-center shrink-0 faq-icon">
+                            <i class="fas fa-plus text-sm"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer text-gray-400 text-lg md:text-xl leading-relaxed">
+                        Once you meet YouTube's requirements, you earn through AdSense (ads placed on your videos). You can also monetize via sponsorships, affiliate links, and dropshipping stores.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Contact Section (Sleek Modern Form connected to Netlify) -->
+    <section id="contact" class="bg-shopify-light py-24 px-6 md:px-12">
+        <div class="max-w-3xl mx-auto bg-white rounded-[40px] p-8 md:p-14 shadow-xl border border-gray-100">
+            <div class="text-center mb-10">
+                <h2 class="text-4xl font-semibold tracking-tight mb-4">Let's start your project</h2>
+                <p class="text-gray-500 text-lg">Fill out the form below and our team will get back to you shortly.</p>
+            </div>
+
+            <!-- Success Message (Hidden default) -->
+            <div id="formSuccess" class="hidden bg-[#008060] text-white p-4 rounded-xl mb-8 flex items-center gap-3 font-medium transition-all">
+                <i class="fas fa-check-circle text-xl"></i>
+                Thank you! Your message has been received successfully.
+            </div>
+
+            <!-- Form configured for Netlify but maintains JS animation -->
+            <form id="modernContactForm" name="contact" method="POST" data-netlify="true" onsubmit="handleContactSubmit(event)">
+                <input type="hidden" name="form-name" value="contact">
+                
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">First Name</label>
+                        <input type="text" name="firstName" required class="w-full bg-shopify-light border border-gray-200 rounded-xl px-4 py-3 text-black focus:border-black focus:ring-1 focus:ring-black transition" placeholder="John">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
+                        <input type="text" name="lastName" required class="w-full bg-shopify-light border border-gray-200 rounded-xl px-4 py-3 text-black focus:border-black focus:ring-1 focus:ring-black transition" placeholder="Doe">
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                    <input type="email" name="email" required class="w-full bg-shopify-light border border-gray-200 rounded-xl px-4 py-3 text-black focus:border-black focus:ring-1 focus:ring-black transition" placeholder="john@company.com">
+                </div>
+
+                <div class="mb-8">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                    <textarea name="message" required rows="4" class="w-full bg-shopify-light border border-gray-200 rounded-xl px-4 py-3 text-black focus:border-black focus:ring-1 focus:ring-black transition resize-none" placeholder="Tell us about your goals..."></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-black text-white font-semibold py-4 rounded-full hover:bg-gray-800 transition shadow-lg text-lg">
+                    Submit Request
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- New Feature: Scroll to Top Button -->
+    <button id="scrollTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="fixed bottom-24 right-6 bg-black text-white w-12 h-12 rounded-full flex justify-center items-center text-xl shadow-2xl hover:scale-110 transition-transform z-40">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- 7. Floating WhatsApp Button -->
+    <a href="https://wa.me/923287310241" target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] text-white w-14 h-14 rounded-full flex justify-center items-center text-3xl shadow-2xl hover:scale-110 transition-transform z-50">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="bg-white py-8 border-t border-gray-200 text-center">
+        <p class="text-gray-500 font-medium">&copy; 2026 Ahmad Raza. All rights reserved.</p>
+    </footer>
+
+    <!-- Interactive JavaScript -->
+    <script>
+        // Navbar Scroll Effect & Scroll-To-Top Button Logic
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            const topBtn = document.getElementById('scrollTopBtn');
+            
+            if (window.scrollY > 20) {
+                nav.classList.add('nav-scrolled');
+                nav.classList.remove('bg-shopify-light');
+            } else {
+                nav.classList.remove('nav-scrolled');
+                nav.classList.add('bg-shopify-light');
+            }
+
+            // Show/Hide Scroll to top button
+            if (window.scrollY > 500) {
+                topBtn.classList.add('show');
+            } else {
+                topBtn.classList.remove('show');
+            }
+        });
+
+        // FAQ Accordion Logic
+        document.querySelectorAll('.faq-item button').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                
+                // Close others
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    if(otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current
+                item.classList.toggle('active');
+            });
+        });
+
+        // Contact Form Submit Handler (AJAX implementation for Netlify + Animation)
+        function handleContactSubmit(event) {
+            event.preventDefault(); // Stop default reload
+            const form = document.getElementById('modernContactForm');
+            const successMsg = document.getElementById('formSuccess');
+            
+            // Send data to Netlify via Fetch API
+            const formData = new FormData(form);
+            fetch("/", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(formData).toString(),
+            })
+            .then(() => {
+                // Show success message and hide form inputs with a smooth effect
+                form.style.opacity = '0';
+                setTimeout(() => {
+                    form.style.display = 'none';
+                    successMsg.classList.remove('hidden');
+                    // Scroll slightly up to see the message clearly
+                    successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, 300);
+            })
+            .catch((error) => alert('Error submitting form: ' + error));
+        }
+    </script>
+   <script>if (window.netlifyIdentity) { window.netlifyIdentity.on("init", user => { if (!user) { window.netlifyIdentity.on("login", () => { document.location.href = "/admin/"; }); } }); }</script>
+</body>
+</html>
